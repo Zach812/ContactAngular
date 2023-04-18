@@ -1,0 +1,23 @@
+<h1>Editing: {{ contact.fName }} {{ contact.lName }}</h1>
+<div class="form-floating mb-3 ml-auto" style="width: 300px">
+  <input class="form-control" id="floatingInput" [(ngModel)]="contact.fName" />
+  <label for="floatingInput">First Name</label>
+</div>
+<div class="form-floating mb-3 ml-auto" style="width: 300px">
+  <input class="form-control" id="floatingInput" [(ngModel)]="contact.lName" />
+  <label for="floatingInput">Last Name</label>
+</div>
+<div class="form-floating mb-3 ml-auto" style="width: 300px">
+  <input
+    class="form-control"
+    id="floatingInput"
+    [(ngModel)]="contact.phoneNum"
+  />
+  <label for="floatingInput">Phone Number</label>
+</div>
+<div class="form-floating mb-3 ml-auto" style="width: 300px">
+  <input class="form-control" id="floatingInput" [(ngModel)]="contact.email" />
+  <label for="floatingInput">Email</label>
+</div>
+<button class="btn btn-danger" (click)="goBack()">Back</button>
+<button class="btn btn-success" (click)="saveContact()">Save</button>

@@ -1,0 +1,15 @@
+<div class="m-3 w-25 card">
+  <div class="card-header">{{ contact.fName }} {{ contact.lName }}</div>
+  <div class="card-body">
+    <h5 class="card-title">Phone Number</h5>
+    <p class="card-text">
+      {{ contact.phoneNum }}
+    </p>
+    <h5 class="card-title">Email</h5>
+    <p class="card-text">
+      {{ contact.email }}
+    </p>
+    <a routerLink="/edit/{{ contact.id }}" class="btn btn-primary">Edit</a>
+    <button class="btn-close close" (click)="handleDelete()"></button>
+  </div>
+</div>
