@@ -8,6 +8,10 @@ import { Observable, of } from 'rxjs';
 export class ContactsService {
   constructor() {}
 
+  addContact(contact: Contact) {
+    CONTACTS.push(contact);
+  }
+
   getContact(id: number) {
     const contact = CONTACTS.find((h) => h.id == id);
     return contact;
