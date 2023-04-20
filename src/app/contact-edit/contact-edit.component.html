@@ -1,23 +1,54 @@
-<h1>Editing: {{ contact.fName }} {{ contact.lName }}</h1>
-<div class="form-floating mb-3 ml-auto" style="width: 300px">
-  <input class="form-control" id="floatingInput" [(ngModel)]="contact.fName" />
-  <label for="floatingInput">First Name</label>
+<div
+  class="container-fluid bg-success p-2 d-flex justify-content-center align-items-center"
+  style="height: 1000px"
+>
+  <div
+    class="mx-auto p-4"
+    style="
+      width: fit-content;
+      background-color: #005643;
+      border-radius: 10px;
+      height: fit-content;
+    "
+  >
+    <h1 class="text-warning">
+      Editing: {{ contact.fName }} {{ contact.lName }}
+    </h1>
+    <div class="form-floating mb-3 ml-auto" style="width: 300px">
+      <input
+        class="form-control"
+        id="floatingInput"
+        [(ngModel)]="contact.fName"
+      />
+      <label for="floatingInput">First Name</label>
+    </div>
+    <div class="form-floating mb-3 ml-auto" style="width: 300px">
+      <input
+        class="form-control"
+        id="floatingInput"
+        [(ngModel)]="contact.lName"
+      />
+      <label for="floatingInput">Last Name</label>
+    </div>
+    <div class="form-floating mb-3 ml-auto" style="width: 300px">
+      <input
+        class="form-control"
+        id="floatingInput"
+        [(ngModel)]="contact.phoneNum"
+      />
+      <label for="floatingInput">Phone Number</label>
+    </div>
+    <div class="form-floating mb-3 ml-auto" style="width: 300px">
+      <input
+        class="form-control"
+        id="floatingInput"
+        [(ngModel)]="contact.email"
+      />
+      <label for="floatingInput">Email</label>
+    </div>
+    <div class="d-flex justify-content-between">
+      <button class="btn btn-danger" (click)="goBack()">Back</button>
+      <button class="btn btn-light" (click)="saveContact()">Save</button>
+    </div>
+  </div>
 </div>
-<div class="form-floating mb-3 ml-auto" style="width: 300px">
-  <input class="form-control" id="floatingInput" [(ngModel)]="contact.lName" />
-  <label for="floatingInput">Last Name</label>
-</div>
-<div class="form-floating mb-3 ml-auto" style="width: 300px">
-  <input
-    class="form-control"
-    id="floatingInput"
-    [(ngModel)]="contact.phoneNum"
-  />
-  <label for="floatingInput">Phone Number</label>
-</div>
-<div class="form-floating mb-3 ml-auto" style="width: 300px">
-  <input class="form-control" id="floatingInput" [(ngModel)]="contact.email" />
-  <label for="floatingInput">Email</label>
-</div>
-<button class="btn btn-danger" (click)="goBack()">Back</button>
-<button class="btn btn-success" (click)="saveContact()">Save</button>

@@ -1,12 +1,17 @@
 import { Injectable } from '@angular/core';
 import { CONTACTS } from './mock-contacts';
 import { Contact } from './Contact';
-import { Observable, of } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
 export class ContactsService {
   constructor() {}
+
+  findNewId() {
+    const ids: number[] = [];
+    CONTACTS.map((movie) => ids.push(movie.id));
+    return Math.max(...ids) + 1;
+  }
 
   addContact(contact: Contact) {
     CONTACTS.push(contact);

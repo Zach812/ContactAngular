@@ -12,13 +12,31 @@ CONTACTS;
 export class AddContactComponent {
   constructor(private contactService: ContactsService) {}
   contact: Contact = {
-    id: CONTACTS.length,
+    id: this.contactService.findNewId(),
     fName: '',
     lName: '',
     email: '',
     phoneNum: '',
   };
+  message = '';
+  checkContact(): boolean {
+    if (
+      this.contact.fName != '' &&
+      this.contact.lName != '' &&
+      this.contact.email != '' &&
+      this.contact.phoneNum != ''
+    ) {
+      return true;
+    }
+    return false;
+  }
+
   addContact() {
-    this.contactService.addContact(this.contact);
+    if (this.checkContact()) {
+      this.contactService.addContact(this.contact);
+      this.message = '';
+      return;
+    }
+    this.message = 'Please fill out all of the feilds!';
   }
 }

@@ -1,5 +1,7 @@
 <app-add-contact></app-add-contact>
-<h1>Contacts</h1>
-<div *ngFor="let contact of contacts">
-  <app-contact-card [contact]="contact"></app-contact-card>
+<h1 class="text-warning" style="background-color: #005643">Contacts</h1>
+<div class="contactsCont">
+  <div *ngFor="let contact of contacts">
+    <app-contact-card [contact]="contact"></app-contact-card>
+  </div>
 </div>

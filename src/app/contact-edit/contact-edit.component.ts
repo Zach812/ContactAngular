@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { ContactsService } from '../contacts.service';
-import { Contact } from '../Contact';
+
 @Component({
   selector: 'app-contact-edit',
   templateUrl: './contact-edit.component.html',

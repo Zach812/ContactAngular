@@ -1,5 +1,7 @@
-<div class="m-3 w-25 card">
-  <div class="card-header">{{ contact.fName }} {{ contact.lName }}</div>
+<div class="m-3 card">
+  <div class="card-header bg-success text-warning">
+    {{ contact.fName }} {{ contact.lName }}
+  </div>
   <div class="card-body">
     <h5 class="card-title">Phone Number</h5>
     <p class="card-text">
@@ -9,7 +11,12 @@
     <p class="card-text">
       {{ contact.email }}
     </p>
-    <a routerLink="/edit/{{ contact.id }}" class="btn btn-primary">Edit</a>
+    <a
+      routerLink="/edit/{{ contact.id }}"
+      class="btn btn-warning mx-auto"
+      style="font-weight: bold; width: 100px"
+      >Edit</a
+    >
     <button class="btn-close close" (click)="handleDelete()"></button>
   </div>
 </div>

@@ -1,22 +1,52 @@
-<h1>Add a contact</h1>
-<div class="form-floating mb-3 ml-auto" style="width: 300px">
-  <input class="form-control" id="floatingInput" [(ngModel)]="contact.fName" />
-  <label for="floatingInput">First Name</label>
+<div class="container-fluid bg-success p-2">
+  <div class="mx-auto" style="width: fit-content">
+    <h1 class="text-warning">Add a contact</h1>
+    <div class="form-floating mb-3 ml-auto" style="width: 300px">
+      <input
+        class="form-control"
+        id="floatingInput"
+        [(ngModel)]="contact.fName"
+      />
+      <label for="floatingInput">First Name</label>
+    </div>
+    <div class="form-floating mb-3 ml-auto" style="width: 300px">
+      <input
+        class="form-control"
+        id="floatingInput"
+        [(ngModel)]="contact.lName"
+      />
+      <label for="floatingInput">Last Name</label>
+    </div>
+    <div class="form-floating mb-3 ml-auto" style="width: 300px">
+      <input
+        class="form-control"
+        id="floatingInput"
+        [(ngModel)]="contact.phoneNum"
+      />
+      <label for="floatingInput">Phone Number</label>
+    </div>
+    <div class="form-floating mb-3 ml-auto" style="width: 300px">
+      <input
+        class="form-control"
+        id="floatingInput"
+        [(ngModel)]="contact.email"
+      />
+      <label for="floatingInput">Email</label>
+    </div>
+    <div class="mx-auto" style="width: 100px">
+      <button
+        class="btn btn-warning mx-auto"
+        style="font-weight: bold; width: 100px"
+        (click)="addContact()"
+      >
+        Add
+      </button>
+    </div>
+    <div
+      class="text-center bg-danger text-white m-2"
+      style="border-radius: 10px; font-size: large"
+    >
+      {{ message }}
+    </div>
+  </div>
 </div>
-<div class="form-floating mb-3 ml-auto" style="width: 300px">
-  <input class="form-control" id="floatingInput" [(ngModel)]="contact.lName" />
-  <label for="floatingInput">Last Name</label>
-</div>
-<div class="form-floating mb-3 ml-auto" style="width: 300px">
-  <input
-    class="form-control"
-    id="floatingInput"
-    [(ngModel)]="contact.phoneNum"
-  />
-  <label for="floatingInput">Phone Number</label>
-</div>
-<div class="form-floating mb-3 ml-auto" style="width: 300px">
-  <input class="form-control" id="floatingInput" [(ngModel)]="contact.email" />
-  <label for="floatingInput">Email</label>
-</div>
-<button class="btn btn-success" (click)="addContact()">Add</button>

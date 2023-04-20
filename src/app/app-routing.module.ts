@@ -5,6 +5,7 @@ import { ContactContComponent } from './contact-cont/contact-cont.component';
 import { ContactEditComponent } from './contact-edit/contact-edit.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: ContactContComponent },
   { path: 'edit/:id', component: ContactEditComponent },
 ];
